@@ -101,7 +101,7 @@ public class Pong extends Application {
 			ballXSpeed *= -1;
 			ballYSpeed *= -1;
 		}
-		gc.fillText(scoreP1 + "\t\t\t\t\t\t\t\t" + scoreP2, width / 2, 100);
+		gc.fillText(scoreP1 + "\t\t\t\t\t\t" + scoreP2, width / 2, 100);
 		gc.fillRect(playerTwoXPos, playerTwoYPos, PLAYER_WIDTH, PLAYER_HEIGHT);
 		gc.fillRect(playerOneXPos, playerOneYPos, PLAYER_WIDTH, PLAYER_HEIGHT);
 		
@@ -109,8 +109,8 @@ public class Pong extends Application {
 	
 	public static void main(String[] args){
 		launch(args);
-		WriteDB obj1 = new WriteDB();
-		obj1.writeScore(game_no,scoreP1,scoreP2);
+		WriteDB objn = new WriteDB();
+		objn.writeScore(game_no,scoreP1,scoreP2);
 		
 	}
 }
